@@ -1,0 +1,25 @@
+name: 'Feishu Notify'
+description: 'Send Feishu interactive card notification from GitHub Actions'
+author: 'Your Name'
+branding:
+  icon: 'send'
+  color: 'blue'
+inputs:
+  app_id:
+    description: 'Feishu APP ID'
+    required: true
+  app_secret:
+    description: 'Feishu APP Secret'
+    required: true
+  template_id:
+    description: 'Feishu message card template ID'
+    required: true
+  chat_id:
+    description: 'Feishu chat/group ID'
+    required: true
+  template_data:
+    description: 'Card template variables (JSON string)'
+    required: true
+runs:
+  using: 'node20'
+  main: 'ncc-out/index.js'

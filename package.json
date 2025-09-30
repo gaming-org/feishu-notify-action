@@ -1,0 +1,37 @@
+{
+  "name": "feishu-notify-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to send Feishu card notifications",
+  "keywords": [
+    "github-action",
+    "feishu",
+    "lark",
+    "notification",
+    "card"
+  ],
+  "homepage": "https://github.com/gaming-org/feishu-notify-action#readme",
+  "bugs": {
+    "url": "https://github.com/gaming-org/feishu-notify-action/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaming-org/feishu-notify-action.git"
+  },
+  "license": "Apache-2.0",
+  "author": "kaster.zhang@gmail.com",
+  "private": true,
+  "main": "ncc-out/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o ncc-out --license LICENSE",
+    "prepare": "npm run build",
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@larksuiteoapi/node-sdk": "^1.55.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.9.2"
+  }
+}
